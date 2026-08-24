@@ -57,3 +57,38 @@ body { background:linear-gradient(135deg,#fcf9ff 0%,#eaf8ff 48%,#fff4f9 100%); }
 
 /* Two focused 3×3 puzzles continue the established midnight, violet, and gold visual language. */
 .puzzle-screen{align-items:center;justify-content:center;flex-direction:column;gap:clamp(14px,2vh,22px);padding-top:clamp(72px,8vh,104px);padding-bottom:clamp(28px,5vh,64px);background:radial-gradient(circle at 50% 48%,rgba(90,65,130,.23),transparent 32%),linear-gradient(145deg,rgba(9,7,17,.92),rgba(20,13,33,.95));color:#fff;text-align:center}.puzzle-copy{max-width:790px}.puzzle-copy .eyebrow{color:#dbc177;margin-bottom:10px}.puzzle-copy h2{font-size:clamp(2.25rem,4.2vw,4.4rem);color:#fff;text-shadow:0 0 26px rgba(212,174,87,.14)}.puzzle-copy h2 em{color:#e8c66e}.puzzle-copy>p:last-child{margin:14px auto 0;color:rgba(255,247,224,.7);font:italic clamp(.95rem,1.3vw,1.08rem) "Playfair Display",serif}.puzzle-board{position:relative;display:grid;grid-template-columns:repeat(3,1fr);width:min(54vh,480px,74vw);aspect-ratio:1;gap:4px;padding:5px;border:1px solid rgba(245,214,139,.35);border-radius:16px;background:rgba(255,255,255,.06);box-shadow:0 26px 70px rgba(0,0,0,.45),0 0 48px rgba(133,99,192,.13);backdrop-filter:blur(12px);user-select:none;-webkit-user-select:none;touch-action:manipulation;transition:transform 1.9s cubic-bezier(.2,.75,.2,1),box-shadow 1s,opacity 1.1s}.puzzle-piece{min-width:0;border:0;border-radius:7px;background-color:#181122;background-size:300% 300%;background-repeat:no-repeat;box-shadow:inset 0 0 0 1px rgba(255,255,255,.09);cursor:pointer;transition:transform .25s ease,box-shadow .25s ease,filter .25s ease;touch-action:manipulation}.puzzle-piece:hover,.puzzle-piece:focus-visible{transform:scale(.97);outline:0;box-shadow:inset 0 0 0 2px rgba(244,208,116,.82),0 0 20px rgba(196,155,74,.25);filter:brightness(1.08)}.puzzle-piece.is-selected{transform:scale(.94);box-shadow:inset 0 0 0 3px #efd078,0 0 25px rgba(232,193,96,.52);filter:brightness(1.14)}.puzzle-board.soft-shake{animation:puzzleShake .36s ease}.puzzle-board.is-solved{gap:0;padding:0;border-color:rgba(246,214,127,.78);box-shadow:0 0 24px rgba(246,210,118,.54),0 0 75px rgba(139,94,207,.34)}.puzzle-board.is-solved .puzzle-piece{border-radius:0;box-shadow:none;cursor:default}.puzzle-board.cinematic-complete{transform:scale(1.08);box-shadow:0 0 38px rgba(247,219,139,.66),0 0 100px rgba(133,91,198,.43)}.puzzle-status{min-height:54px;color:#fff8dd;font:italic clamp(1rem,1.7vw,1.25rem) "Playfair Display",serif}.puzzle-status p{margin:0 0 12px;text-shadow:0 0 16px rgba(248,212,126,.26)}.puzzle-next{border:1px solid rgba(249,221,143,.45);border-radius:999px;padding:13px 20px;background:rgba(250,226,166,.1);box-shadow:inset 0 1px rgba(255,255,255,.2),0 8px 25px rgba(0,0,0,.22);color:#fff2ca;font:700 .8rem "DM Sans",sans-serif;cursor:pointer;transition:transform .25s,background .25s}.puzzle-next:hover,.puzzle-next:focus-visible{background:rgba(250,226,166,.2);outline:0;transform:translateY(-2px)}.puzzle-sparkle{position:absolute;left:var(--x);top:var(--y);z-index:3;width:7px;height:7px;border-radius:50%;background:#fff4b1;box-shadow:0 0 12px 4px rgba(246,211,110,.82);animation:puzzleSparkle 1.2s ease-out var(--delay) both;pointer-events:none}.final-message-screen{align-items:center;justify-content:center;text-align:center;background:radial-gradient(circle at 50% 47%,rgba(113,83,159,.2),transparent 30%),linear-gradient(145deg,#0a0711,#120a1d 55%,#08060e)}.final-message-copy{max-width:850px;padding:30px;position:relative;z-index:1}.final-message-line{margin:0;color:#fff6dc;text-shadow:0 0 26px rgba(220,179,83,.15);opacity:0;filter:blur(8px);transform:translateY(22px)}.line-one{font:italic clamp(1.45rem,2.5vw,2.2rem) "Playfair Display",serif}.line-two{margin-top:32px;font:clamp(1.1rem,2vw,1.55rem)/1.65 "Playfair Display",serif}.line-three{margin-top:35px;color:#fff;font-size:clamp(2.8rem,5.5vw,5.8rem)}.line-three em{color:#e7c26c}.line-four{margin-top:31px;font:clamp(1.05rem,1.8vw,1.45rem)/1.62 "Playfair Display",serif}.line-five{margin-top:32px;color:rgba(245,223,169,.76);font:italic 1rem "Playfair Display",serif}.reveal-message .line-one{animation:cinematicReveal 1.4s .35s forwards}.reveal-message .line-two{animation:cinematicReveal 1.4s 2.65s forwards}.reveal-message .line-three{animation:cinematicReveal 1.4s 5.7s forwards}.reveal-message .line-four{animation:cinematicReveal 1.4s 8.05s forwards}.reveal-message .line-five{animation:cinematicReveal 1.4s 10.3s forwards}.final-screen{background:radial-gradient(circle at 50% 50%,rgba(112,74,170,.18),transparent 34%),#090611}.final-screen .final-copy{animation:cinematicReveal 1.5s .75s both}.final-screen h2{color:#fff}.final-screen .eyebrow,.final-screen .final-wish,.final-screen .little-line{color:#efd68e}@keyframes puzzleShake{25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}@keyframes puzzleSparkle{0%{transform:scale(.2);opacity:0}25%{opacity:1}100%{transform:translateY(-38px) scale(1.5);opacity:0}}@keyframes cinematicReveal{to{opacity:1;filter:blur(0);transform:translateY(0)}}@media(max-width:900px){.puzzle-board{width:min(48vh,420px,82vw)}.puzzle-copy h2{font-size:clamp(2rem,5vw,3.2rem)}}@media(max-height:760px) and (min-width:641px){.puzzle-screen{gap:10px;padding-top:62px;padding-bottom:20px}.puzzle-copy h2{font-size:clamp(2rem,3.5vw,3rem)}.puzzle-copy>p:last-child{margin-top:8px}.puzzle-board{width:min(47vh,370px,58vw)}.puzzle-status{min-height:38px}}@media(max-width:640px){.puzzle-screen{justify-content:flex-start;overflow:auto;padding-top:74px}.puzzle-board{width:min(86vw,420px)}.puzzle-copy>p:last-child{padding:0 12px}.final-message-copy{padding:24px 16px}.line-two{margin-top:24px}.line-three{margin-top:28px}.line-four{margin-top:24px}.line-five{margin-top:24px}}
+
+/* TV / landscape screens */
+@media (orientation: landscape) and (min-width: 900px) {
+  html,
+  body {
+    width: 100% !important;
+    min-width: 100% !important;
+    height: 100% !important;
+    min-height: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+  }
+
+  #experience {
+    position: relative !important;
+    width: 100vw !important;
+    min-width: 100vw !important;
+    max-width: none !important;
+    height: 100vh !important;
+    min-height: 100vh !important;
+    max-height: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  #experience > .screen {
+    width: 100vw !important;
+    min-width: 100vw !important;
+    height: 100vh !important;
+    min-height: 100vh !important;
+    max-width: none !important;
+    margin: 0 !important;
+  }
+}
