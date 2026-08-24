@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#b7b4f7" />
+  <title>Happy 13th Birthday!</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <div class="stars" aria-hidden="true"></div><div class="butterflies" aria-hidden="true"><i>&#10047;</i><i>&#10047;</i><i>&#10047;</i></div>
+  <!-- Global decorative layer: kept separate from every existing birthday section. -->
+  <div class="magic-background" aria-hidden="true">
+    <div class="magic-moon"><i></i><b></b><em></em></div><div class="magic-cloud cloud-a"></div><div class="magic-cloud cloud-b"></div><div class="magic-cloud cloud-c"></div>
+    <div id="magicStars"></div><div id="magicFireflies"></div><div id="magicParticles"></div><div id="shootingStarLayer"></div><div id="magicBalloons"></div>
+  </div>
+  <audio id="birthdayMusic" src="assets/music/birthday.mp3" loop preload="metadata"></audio>
+  <div class="music-widget">
+    <button class="music-control music-fab" id="musicControl" aria-label="Open music controls" aria-expanded="false"><span class="music-icon">&#9835;</span><span class="music-label">Music</span></button>
+    <section class="music-panel" id="musicPanel" aria-label="Background music controls" aria-hidden="true">
+      <p class="now-playing">&#127925; Now Playing</p><p class="song-title">Birthday Magic</p><!-- Edit the song title here if needed. -->
+      <div class="music-actions"><button class="panel-action" id="playPauseButton" type="button" disabled>Play</button><button class="panel-action mute-action" id="muteButton" type="button" aria-label="Mute music">&#128266;</button></div>
+      <label class="volume-control" for="volumeSlider"><span class="sr-only">Background music volume</span><input id="volumeSlider" type="range" min="0" max="100" value="70" aria-label="Background music volume" /><output id="volumeValue" for="volumeSlider">70%</output></label>
+    </section>
+  </div>
+  <main id="experience">
+    <section class="screen active loading-screen" id="loading" aria-label="Loading birthday surprise">
+      <div class="loading-star">&#10022;</div><p class="eyebrow">JUST FOR YOU</p>
+      <h1>A Special Surprise<br>is <em>Waiting...</em></h1><div class="progress"><span></span></div>
+    </section>
+
+    <!-- A cinematic opening scene shown before the existing homepage. -->
+    <section class="screen intro-gift-screen" id="introGift" aria-label="Open the birthday surprise">
+      <div class="intro-orbit orbit-one"></div><div class="intro-orbit orbit-two"></div>
+      <div class="intro-stars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      <p class="intro-prompt">Click the gift to begin your surprise <span aria-hidden="true">&#127873;</span></p>
+      <button class="intro-gift" id="introGiftButton" aria-label="Open the surprise">
+        <span class="intro-light"></span><span class="intro-box"></span><span class="intro-ribbon"></span>
+        <span class="intro-lid"></span><span class="intro-lid-ribbon"></span><span class="intro-bow intro-bow-left"></span><span class="intro-bow intro-bow-right"></span><span class="intro-knot"></span>
+      </button>
+      <div class="intro-particles" id="introParticles" aria-hidden="true"></div>
+      <p class="intro-hint">A little magic is waiting inside</p>
+    </section>
+
+    <!-- Cinematic memories: populated only with the 30 local birthday photos. -->
+    <section class="screen memory-screen" id="memories" aria-label="Birthday memories">
+      <div class="memory-flash" id="memoryFlash"><img id="flashImage" alt="A birthday memory" /></div>
+      <div class="memory-slideshow" id="memorySlideshow">
+        <div class="memory-backdrop" id="memoryBackdrop"></div>
+        <figure class="memory-frame" id="memoryFrame"><img id="slideshowImage" alt="A birthday memory" /><figcaption id="memoryCaption"></figcaption></figure>
+      </div>
+    </section>
+
+    <section class="screen welcome-screen" id="welcome">
+      <div class="sparkles">&#10022; <span>&#10023;</span> &#10022;</div><p class="eyebrow">24 AUGUST 2026 &middot; A DAY FOR CELEBRATING</p>
+      <h1>Happy <em>13th</em><br>Birthday!</h1><p class="lead">Thirteen looks absolutely beautiful on you.</p>
+      <p class="little-line">Aaj ka din sirf tumhare naam. &middot; Tu nehmi asich hasat raha.</p>
+      <button class="primary-btn" data-next="gift">Open your surprise <span>&rarr;</span></button>
+    </section>
+
+    <section class="screen gift-screen" id="gift">
+      <p class="eyebrow">ONE LITTLE TAP AWAY</p><h2>A gift for the sweetest<br><em>dreamer</em> I know</h2>
+      <button class="gift-box" id="giftButton" aria-label="Open birthday gift">
+        <span class="gift-back"></span><span class="gift-base"></span><span class="gift-front"></span><span class="gift-side"></span>
+        <span class="ribbon vertical"></span><span class="ribbon horizontal"></span><span class="lid"></span><span class="lid-ribbon"></span>
+        <span class="bow bow-left"></span><span class="bow bow-right"></span><span class="bow-knot"></span><span class="gift-glow"></span>
+      </button>
+      <p class="tap-hint">Tap the gift to unwrap a little joy</p>
+    </section>
+
+    <section class="screen birthday-screen" id="birthday">
+      <div class="balloon balloon-1"></div><div class="balloon balloon-2"></div><div class="balloon balloon-3"></div><div class="balloon balloon-4"></div>
+      <div class="birthday-copy"><p class="eyebrow">TODAY, WE CELEBRATE YOU</p><p class="name-label">SHRAVANI</p>
+        <h2>Happy Birthday,<br><em>beautiful soul.</em></h2><p class="lead">13 years of kindness, sweetness, and a heart full of wonderful possibilities.</p>
+        <button class="primary-btn" data-next="message">A note for you <span>&rarr;</span></button></div><div class="confetti" aria-hidden="true"></div>
+    </section>
+
+    <section class="screen message-screen" id="message"><div class="letter"><span class="letter-mark">&#9825;</span><p class="eyebrow">LITTLE THINGS</p>
+      <h2>Never stop being<br><em>you.</em></h2><p>Keep dreaming those big, brave dreams. Keep learning, laughing, and carrying your kind heart into every room you enter.</p>
+      <p>You are sweet, strong, and so deeply loved. Class 8 is only one chapter &mdash; your story is going to be extraordinary.</p>
+      <p class="hindi-line">Tumhare sapne bahut bade hain, aur tum unke liye bani ho.</p><p class="signature">With all my love,<br>Your biggest cheerleader</p></div>
+      <button class="primary-btn" data-next="funnyPuzzle">One little challenge <span>&rarr;</span></button>
+    </section>
+
+    <section class="screen puzzle-screen" id="funnyPuzzle" aria-label="Funny photo puzzle">
+      <div class="puzzle-copy"><p class="eyebrow">LITTLE THINGS</p><h2>One little challenge<br><em>before we continue...</em></h2><p>Okay... this one is definitely worth fixing. &#128514;</p></div>
+      <div class="puzzle-board" id="funnyPuzzleBoard" role="group" aria-label="Funny photo puzzle"></div>
+      <div class="puzzle-status" id="funnyPuzzleStatus" aria-live="polite"></div>
+    </section>
+
+    <section class="screen puzzle-screen special-puzzle-screen" id="specialPuzzle" aria-label="Special photo puzzle">
+      <div class="puzzle-copy"><p class="eyebrow">ONE MORE MEMORY</p><h2>Now... one memory worth<br><em>putting together.</em></h2><p>Some moments are worth taking a little more time for.</p></div>
+      <div class="puzzle-board" id="specialPuzzleBoard" role="group" aria-label="Special photo puzzle"></div>
+      <div class="puzzle-status" id="specialPuzzleStatus" aria-live="polite"></div>
+    </section>
+
+    <section class="screen final-message-screen" id="finalMessage" aria-label="Final birthday message">
+      <div class="final-message-copy"><p class="final-message-line line-one">For you, Shravani.</p><p class="final-message-line line-two">Some memories become stories.<br>Some people become a part of who we are.</p><h2 class="final-message-line line-three">Happy Birthday, <em>Shravani</em> &#10024;</h2><p class="final-message-line line-four">Keep smiling.<br>Keep shining.<br>And always stay exactly the way you are. &#10084;&#65039;</p><p class="final-message-line line-five">Made with love, just for you.</p></div>
+    </section>
+
+    <section class="screen dream-screen" id="dreams"><div class="dream-head"><p class="eyebrow">YOUR DREAM WALL</p><h2>There is a bright<br><em>future</em> waiting for you.</h2><p class="lead">Keep these wishes close whenever you need a little courage.</p></div>
+      <div class="dream-grid"><article class="dream-card glass"><b>&#10022;</b><p>Believe in your big dreams. One day, they will know your name.</p></article><article class="dream-card glass"><b>&#9825;</b><p>Stay kind. Your soft heart is one of your greatest strengths.</p></article><article class="dream-card glass"><b>&#10023;</b><p>Learn with curiosity, try with courage, and never be afraid to begin.</p></article><article class="dream-card glass"><b>&#10048;</b><p>Tu khup special ahes. Keep smiling and keep shining.</p></article></div>
+      <button class="primary-btn" data-next="final">One last wish <span>&rarr;</span></button>
+    </section>
+
+    <section class="screen final-screen" id="final"><div id="fireworks" aria-hidden="true"></div><div class="final-copy"><div class="sparkles">&#10022; <span>&#10023;</span> &#10022;</div><p class="eyebrow">THIS YEAR IS YOURS</p>
+      <h2>Happy Birthday,<br><em>Shravani.</em></h2><p class="final-wish">May all your dreams come true.</p><p class="little-line">Made with love, just for you.</p></div>
+    </section>
+  </main><script src="script.js"></script>
+</body></html>
